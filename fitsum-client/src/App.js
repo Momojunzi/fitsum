@@ -1,11 +1,12 @@
 import React from 'react';
+import Landing from './components/landing/landing';
 
 import './App.css';
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      app
+    <div className='App'>
+      <Landing />
     </div>
   );
 }
