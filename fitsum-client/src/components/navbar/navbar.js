@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   const [navMargin, setNavMargin] = useState('-41vh');
   const [navIcon, setNavIcon] = useState('menu');
+  const [hbBackground, setHbBackground] = useState('rgba(255,255,255,0.0)');
 
   const styles = StyleSheet.create({
     navBar: {
@@ -27,8 +28,8 @@ const NavBar = () => {
         marginBottom: '0',
         marginLeft: '0',
         paddingTop: '0',
-        opacity: '100',
-        transition: 'margin 0.75s'
+        backgroundColor: hbBackground,
+        transition: 'margin 0.75s, background-color 0.75s'
       },
       '@media (min-width: 768px)': {
         display: 'grid',
@@ -38,6 +39,9 @@ const NavBar = () => {
       }
     },
     link: {
+      fontFamily: '"Comfortaa", cursive',
+      fontWeight: 'bold',
+      fontSize: '1.25em',
       display: 'grid',
       alignContent: 'center',
       color: 'black',
@@ -48,7 +52,9 @@ const NavBar = () => {
     hamburgerDiv: {
       '@media (max-width: 767px)': {
         display: 'grid',
-        color: 'black'
+        color: 'black',
+        backgroundColor: hbBackground,
+        transition: 'background-color 0.75s'
       },
       '@media (min-width: 768px)': {
         display: 'none'
@@ -63,9 +69,11 @@ const NavBar = () => {
     if (navMargin !== '-2vh') {
       setNavMargin('-2vh');
       setNavIcon('close');
+      setHbBackground('rgba(255,255,255,0.9)');
     } else {
       setNavMargin('-41vh');
       setNavIcon('menu');
+      setHbBackground('rgba(255,255,255,0.0)');
     }
   };
 
