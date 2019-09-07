@@ -1,9 +1,14 @@
 import React from 'react';
 
+const landingStyle = {
+  backgroundImage: 'url("../images/testphoto.jpg")',
+
+}
+
 const Landing = () => {
   return (
-    <div>
-      Landing
+    <div style={landingStyle} >
+      test
     </div>
   );
 };
