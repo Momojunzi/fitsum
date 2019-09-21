@@ -41,7 +41,7 @@ const Landing = () => {
     <div className={css(styles.landing)}>
       <div className={css(styles.landingContent)}>
         <div className={css(styles.landingTitleDiv)}>
-          Eritrea Through the Lense
+          ERITREA REVEALED
         </div>
       </div>
     </div>
